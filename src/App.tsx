@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { AdminLayout } from './components/layout/AdminLayout';
@@ -99,7 +99,7 @@ export function App() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
       <PublicShell settings={settings}>
         <Routes>
@@ -135,7 +135,7 @@ export function App() {
           </Route>
         </Routes>
       </PublicShell>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
